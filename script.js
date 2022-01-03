@@ -66,7 +66,7 @@ async function get()
     <p>Joined: ${getdata.created_at}</p>`;
 
 
-    let getreposit= await fetch(`https://api.github.com/users/${username}/repos`);
+    let getreposit= await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
     let aftergetreposit=await getreposit.json();
     console.log(aftergetreposit);
 
